@@ -1,5 +1,5 @@
 # PCC Net: Perspective Crowd Counting via Spatial Convolutional Network
-This is an official implementaion of the paper "PCC net" (PCC Net: Perspective Crowd Counting via Spatial Convolutional Network).
+This is an official implementaion of the paper "PCC Net" (PCC Net: Perspective Crowd Counting via Spatial Convolutional Network).
 
 ![PCC Net.](./imgs/img0.png "pcc")
 
@@ -31,7 +31,7 @@ We also provide the processed Part B dataset for training. [[Link](https://mailn
 1. Run the train_lr.py: ```python train_lr.py```.
 2. See the training outputs: ```Tensorboard --logdir=exp --port=6006```.
 
-In the experiments, training  and tesing 800 epoches take 21 hours on GTX 1080Ti. 
+In the experiments, training and tesing 800 epoches take 21 hours on GTX 1080Ti. 
 
 ## Expermental results
 
@@ -45,6 +45,11 @@ The mae and mse are the results on test set. Others are triaining loss.
 Visualization results on the test set as below:
 ![Visualization results on the test set.](./imgs/img2.jpg "pcc_v")
 Column 1: input image; Column 2: density map GT; Column 3: density map prediction; Column 4: segmentation map GT; Column 5: segmentation map prediction.
+
+
+## Tips
+
+In this code, the validation is directly on the test set. Strictly speaking, it is evaluated on val set (randomly selected from training set), which is adoped in the paper. Here, for a comparble reproduction (namely fixed splitting sets), this code directly adopt the test set for validation, which causes that the results of this code are better than that of our paper.
 
 ## Citation
 If you use the code, please cite the following paper:
