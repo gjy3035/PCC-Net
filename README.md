@@ -1,5 +1,5 @@
 # PCC Net: Perspective Crowd Counting via Spatial Convolutional Network
-This is an official implementaion of the paper "PCC Net" (PCC Net: Perspective Crowd Counting via Spatial Convolutional Network).
+This is an official implementaion of the paper "PCC Net" (PCC Net: Perspective Crowd Counting via Spatial Convolutional Network, completed in February 2018, accepted by TCSVT in May 2019).
 
 ![PCC Net.](./imgs/img0.png "pcc")
 
