@@ -1,4 +1,4 @@
-# PCC Net: Perspective Crowd Counting via Spatial Convolutional Network
+# [PCC Net: Perspective Crowd Counting via Spatial Convolutional Network](https://arxiv.org/abs/1905.10085)
 This is an official implementaion of the paper "PCC Net" (PCC Net: Perspective Crowd Counting via Spatial Convolutional Network, completed in February 2018, accepted by TCSVT in May 2019).
 
 ![PCC Net.](./imgs/img0.png "pcc")
@@ -53,3 +53,11 @@ In this code, the validation is directly on the test set. Strictly speaking, it 
 
 ## Citation
 If you use the code, please cite the following paper:
+```
+@article{gao2019perspective,
+  title={PCC Net: Perspective Crowd Counting via Spatial Convolutional Network},
+  author={Gao, Junyu and Wang, Qi and Li, Xuelong},
+  journal={arXiv preprint arXiv:1905.10085},
+  year={2019}
+}
+```
