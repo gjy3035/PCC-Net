@@ -25,7 +25,8 @@ python build.py
 3. Generate the density maps by using the [code](https://github.com/aachenhang/crowdcount-mcnn/tree/master/data_preparation).
 4. Generate the segmentation maps.
 
-We also provide the processed Part B dataset for training. [[Link](https://mailnwpueducn-my.sharepoint.com/:u:/g/personal/gjy3035_mail_nwpu_edu_cn/EcMLqr9XuH1ChAgkqpxL_6kBK9EyCmIuXMxTb09FrjMYow?e=LJnOcC)]
+We also provide the processed Part B dataset for training and pre-trained model. [[Link](https://mailnwpueducn-my.sharepoint.com/:f:/g/personal/gjy3035_mail_nwpu_edu_cn/Eh-0BXp4Yy5Bswj0F21wktcB17vNMRfc09nMVq7q-c2KSA?e=2YrVzP
+)]
 
 ## Training model
 1. Run the train_lr.py: ```python train_lr.py```.
