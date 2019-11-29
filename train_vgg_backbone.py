@@ -60,9 +60,10 @@ def main():
                             {'params': [param for name, param in net.named_parameters() if 'base' in name], 'lr': 1e-5},
                             {'params': [param for name, param in net.named_parameters() if 'seg' not in name and 'base' not in name], 'lr': cfg.TRAIN.LR}
                           ])
+    scheduler = StepLR(optimizer, step_size=cfg.TRAIN.NUM_EPOCH_LR_DECAY, gamma=cfg.TRAIN.LR_DECAY)
     
     i_tb = 0
-    for epoch in range(cfg.TRAIN.MAX_EPOCH):
+    for epoch in range(cfg.TRAIN.MAX_EPOCH):       
 
         _t['train time'].tic()
         i_tb,model_path = train(train_loader, net, optimizer, epoch, i_tb)
@@ -74,6 +75,8 @@ def main():
         validate(val_loader, model_path, epoch, restore_transform)
         _t['val time'].toc(average=False)
         print( 'val time of one epoch: {:.2f}s'.format(_t['val time'].diff))
+
+        scheduler.step()
 
 
 def train(train_loader, net, optimizer, epoch, i_tb):

@@ -30,11 +30,11 @@ __C.TRAIN.SEG_WIEGHT = 1e-2
 
 __C.TRAIN.NUM_BOX = 20 #boxes
 
-__C.TRAIN.GPU_ID = [3]
+__C.TRAIN.GPU_ID = [1]
 
 # base lr
 __C.TRAIN.LR = 1e-4
-__C.TRAIN.LR_DECAY = 1
+__C.TRAIN.LR_DECAY = 0.995
 __C.TRAIN.NUM_EPOCH_LR_DECAY = 1 # epoches
 
 __C.TRAIN.MAX_EPOCH = 2000
