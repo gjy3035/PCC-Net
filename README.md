@@ -5,12 +5,6 @@ This is an official implementation of the paper "PCC net" (PCC Net: Perspective 
 
 In the paper, the experiments are conducted on the three populuar datasets: Shanghai Tech, UCF_CC_50 and WorldExpo'10. To be specific, Shanghai Tech Part B contains crowd images with the same resolution. For easier data prepareation, we only release the pre-trained model on ShanghaiTech Part B dataset in this repo.
 
-## Bracnhes
-
-1. [ori_pt0.2_py2](https://github.com/gjy3035/PCC-Net/tree/ori_pt0.2_py2): the original version.
-2. [ori_pt1_py3](https://github.com/gjy3035/PCC-Net): the current version.
-3. [vgg_pt1_py3](https://github.com/gjy3035/PCC-Net/tree/vgg_pt1_py3): vgg-backbone PCC Net (higher performance).
-
 ##  Requirements
 - Python 3.x
 - Pytorch 1.x

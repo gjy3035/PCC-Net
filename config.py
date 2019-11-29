@@ -30,7 +30,7 @@ __C.TRAIN.SEG_WIEGHT = 1e-4
 
 __C.TRAIN.NUM_BOX = 20 #boxes
 
-__C.TRAIN.GPU_ID = [3]
+__C.TRAIN.GPU_ID = [1]
 
 # base lr
 __C.TRAIN.LR = 1e-4
