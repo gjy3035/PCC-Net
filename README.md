@@ -5,19 +5,20 @@ This is an official implementation of the paper "PCC net" (PCC Net: Perspective 
 
 In the paper, the experiments are conducted on the three populuar datasets: Shanghai Tech, UCF_CC_50 and WorldExpo'10. To be specific, Shanghai Tech Part B contains crowd images with the same resolution. For easier data prepareation, we only release the pre-trained model on ShanghaiTech Part B dataset in this repo.
 
+## Bracnhes
+
+1. [ori_pt0.2_py2](https://github.com/gjy3035/PCC-Net/tree/ori_pt0.2_py2): the original version.
+2. [ori_pt1_py3](https://github.com/gjy3035/PCC-Net): current version.
+3. [vgg_pt1_py3](https://github.com/gjy3035/PCC-Net/tree/vgg_pt1_py3): vgg-backbone PCC Net (higher performance).
+
 ##  Requirements
-- Python 2.7
-- Pytorch 0.2.0 
+- Python 3.x
+- Pytorch 1.x
 - TensorboardX (pip)
 - torchvision  (pip)
 - easydict (pip)
 - pandas  (pip)
 
-## Installation
-```Shell 
-cd ./misc/roi_pooling
-python build.py
-```
 
 ## Data preparation
 1. Download the original ShanghaiTech Dataset [Link: [Dropbox ](https://www.dropbox.com/s/fipgjqxl7uj8hd5/ShanghaiTech.zip?dl=0)/ [BaiduNetdisk](https://pan.baidu.com/s/1nuAYslz)]
