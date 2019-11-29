@@ -27,7 +27,7 @@ class ori(nn.Module):
                                      Conv2d(128, 64, 3, same_padding=True, NL='prelu', bn=bn),
                                      Conv2d(64, 32, 3, same_padding=True, NL='prelu', bn=bn))
                 
-        self.roi_pool = RoIPool([16, 16], 1/16.0)
+        self.roi_pool = RoIPool([16, 16], 1/8.0)
         self.hl_prior_conv2d = Conv2d( 32, 16, 1, same_padding=True, NL='prelu', bn=bn)
         
         self.bbx_pred = nn.Sequential(

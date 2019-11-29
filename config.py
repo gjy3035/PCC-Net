@@ -23,14 +23,14 @@ __C.TRAIN.INPUT_SIZE = (512,680)
 __C.TRAIN.SEED = 640
 __C.TRAIN.RESUME = ''#model path
 __C.TRAIN.BATCH_SIZE = 6 #imgs
-__C.TRAIN.BCE_WIEGHT = 1e-4
+__C.TRAIN.BCE_WIEGHT = 1e-2
 
-__C.TRAIN.SEG_LR = 1e-4
-__C.TRAIN.SEG_WIEGHT = 1e-4
+__C.TRAIN.SEG_LR = 1e-5
+__C.TRAIN.SEG_WIEGHT = 1e-2
 
 __C.TRAIN.NUM_BOX = 20 #boxes
 
-__C.TRAIN.GPU_ID = [2]
+__C.TRAIN.GPU_ID = [3]
 
 # base lr
 __C.TRAIN.LR = 1e-4

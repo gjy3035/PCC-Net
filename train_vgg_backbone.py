@@ -173,24 +173,24 @@ def validate(val_loader, model_path, epoch, restore):
             mae += abs(gt_count-pred_cnt)
             mse += ((gt_count-pred_cnt)*(gt_count-pred_cnt))
 
-            x = []
-            if vi==0:
-                for idx, tensor in enumerate(zip(img.cpu().data, pred_map, gt_map, pred_seg, gt_seg)):
-                    if idx>cfg.VIS.VISIBLE_NUM_IMGS:
-                        break
-                    # pdb.set_trace()
-                    pil_input = restore(tensor[0]/255.)
-                    pil_label = torch.from_numpy(tensor[2]/(tensor[2].max()+1e-10)).repeat(3,1,1)
-                    pil_output = torch.from_numpy(tensor[1]/(tensor[1].max()+1e-10)).repeat(3,1,1)
+            # x = []
+            # if vi==0:
+            #     for idx, tensor in enumerate(zip(img.cpu().data, pred_map, gt_map, pred_seg, gt_seg)):
+            #         if idx>cfg.VIS.VISIBLE_NUM_IMGS:
+            #             break
+            #         # pdb.set_trace()
+            #         pil_input = restore(tensor[0])
+            #         pil_label = torch.from_numpy(tensor[2]/(tensor[2].max()+1e-10)).repeat(3,1,1)
+            #         pil_output = torch.from_numpy(tensor[1]/(tensor[1].max()+1e-10)).repeat(3,1,1)
                     
-                    pil_gt_seg = torch.from_numpy(tensor[4]).repeat(3,1,1).float()
-                    pil_pred_seg = torch.from_numpy(tensor[3]).repeat(3,1,1).float()
-                    # pdb.set_trace()
+            #         pil_gt_seg = torch.from_numpy(tensor[4]).repeat(3,1,1).float()
+            #         pil_pred_seg = torch.from_numpy(tensor[3]).repeat(3,1,1).float()
+            #         # pdb.set_trace()
                     
-                    x.extend([pil_to_tensor(pil_input.convert('RGB')), pil_label, pil_output, pil_gt_seg, pil_pred_seg])
-                x = torch.stack(x, 0)
-                x = vutils.make_grid(x, nrow=5, padding=5)
-                writer.add_image(exp_name + '_epoch_' + str(epoch+1), (x.numpy()*255).astype(np.uint8))
+            #         x.extend([pil_to_tensor(pil_input.convert('RGB')), pil_label, pil_output, pil_gt_seg, pil_pred_seg])
+            #     x = torch.stack(x, 0)
+            #     x = vutils.make_grid(x, nrow=5, padding=5)
+            #     writer.add_image(exp_name + '_epoch_' + str(epoch+1), (x.numpy()*255).astype(np.uint8))
 
     mae = mae/val_set.get_num_samples()
     mse = np.sqrt(mse/val_set.get_num_samples())
